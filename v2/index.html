@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aluguel de máquina de café para empresas | Café Prático</title>
+<meta name="description" content="Máquina de café para a sua empresa com instalação grátis em até 72 horas, treinamento e manutenção inclusos. Lojas em Manaus, Belém, Boa Vista, Porto Velho e Teresina.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Aluguel de máquina de café para empresas | Café Prático">
+<meta property="og:description" content="Instalação grátis em até 72 horas, treinamento e manutenção inclusos. Aluguel a partir de R$ 9,33 por dia.">
+<meta property="og:image" content="img/maquina-instalada-900.webp">
+<meta name="theme-color" content="#2b1a12">
+<link rel="icon" href="img/logo-branco.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cafe:#2b1a12;        /* espresso: fundo escuro */
+  --cafe-2:#3e271c;      /* torra média */
+  --cafe-3:#5a3a2a;
+  --latte:#f1e7dc;       /* fundo claro alternado, café com leite */
+  --linha:#e2d4c6;
+  --texto:#2b1a12;
+  --texto-2:#6a5446;
+  --sobre-escuro:#e8d9ca; /* texto de apoio sobre o espresso */
+  --laranja:#ff6a13;     /* laranja da marca */
+  --laranja-escuro:#c24a07;
+  --maquina:#1a1d24;     /* corpo da máquina, grafite */
+  --painel:#262a32;
+  --lcd:#bfd1e6;
+  --lcd-tinta:#13233a;
+  --botao:#d7262e;
+  --branco:#fff;
+  --raio:10px;
+  --largura:1140px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:"Archivo",system-ui,sans-serif;font-size:1.0625rem;line-height:1.6;color:var(--texto);background:var(--branco)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;font-stretch:76%;font-weight:760;line-height:1.02;letter-spacing:-.005em}
+h2{font-size:clamp(2rem,5.4vw,3.1rem)}
+h3{font-size:1.35rem;font-stretch:84%;font-weight:700;line-height:1.15}
+p{margin:0}
+.envelope{width:min(100% - 2.5rem,var(--largura));margin-inline:auto}
+.secao{padding:clamp(4rem,9vw,7rem) 0}
+.secao--latte{background:var(--latte)}
+.apoio{color:var(--texto-2);max-width:38rem}
+.titulo-secao{max-width:22ch;margin-bottom:1rem}
+:focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:4px}
+
+/* botões de ação */
+.acao{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;padding:.85rem 1.5rem;border-radius:999px;border:0;background:var(--laranja);color:var(--cafe);font:inherit;font-weight:700;font-size:1.0625rem;line-height:1.25;text-align:center;text-decoration:none;cursor:pointer;transition:background-color .15s}
+.acao:hover{background:#ff8a45}
+.acao svg{width:1.25rem;height:1.25rem;flex:none}
+.link{font-weight:600;text-decoration:underline;text-underline-offset:.25em;text-decoration-thickness:2px;text-decoration-color:var(--laranja)}
+.link-botao{border:0;background:none;padding:0;font:inherit;cursor:pointer}
+
+/* topo */
+.topo{background:var(--cafe);color:var(--branco)}
+.topo__barra{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
+.topo__marca{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.topo__marca img{width:56px;height:56px}
+.topo__marca span{font-stretch:80%;font-weight:700;font-size:1.15rem;line-height:1.1}
+.topo__nav{display:none;gap:1.75rem;font-size:.98rem}
+.topo__nav a{text-decoration:none;opacity:.85}
+.topo__nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:.3em}
+.topo__acao{min-height:2.75rem;padding:.6rem 1.15rem;font-size:.98rem}
+@media (min-width:900px){.topo__nav{display:flex}}
+
+/* abertura */
+.abertura{background:radial-gradient(120% 90% at 85% 10%,#43291d 0%,var(--cafe) 60%);color:var(--branco);padding:clamp(1.5rem,5vw,4rem) 0 clamp(3.5rem,8vw,6rem);overflow:hidden}
+.abertura__grade{display:grid;gap:3rem;align-items:center}
+@media (min-width:960px){.abertura__grade{grid-template-columns:1.15fr .85fr;gap:4rem}}
+.abertura h1{font-size:clamp(2.6rem,8.6vw,4.9rem);max-width:13ch}
+.abertura__texto{margin-top:1.4rem;max-width:34rem;font-size:1.15rem;color:var(--sobre-escuro)}
+.abertura__acoes{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-top:2rem}
+.abertura__acoes .link{color:var(--branco)}
+.cidade-lembrada{margin-top:.9rem;font-size:.95rem;color:var(--sobre-escuro)}
+.cidade-lembrada .link-botao{color:var(--branco)}
+.nota{display:flex;align-items:center;gap:.6rem;margin-top:2.25rem;color:var(--sobre-escuro);font-size:.98rem}
+.nota strong{color:var(--branco)}
+.estrelas{color:#ffc23d;letter-spacing:.08em;font-size:1.05rem}
+
+/* a máquina */
+.maquina{position:relative;width:min(100%,410px);margin-inline:auto;background:linear-gradient(160deg,#2a2e36 0%,#16181d 55%,#0e0f13 100%);border-radius:30px 30px 18px 18px;padding:22px 20px 18px;box-shadow:0 30px 60px -20px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.07)}
+.painel{position:relative;background-color:var(--painel);background-image:radial-gradient(circle at 1.5px 1.5px,rgba(255,255,255,.07) 1px,transparent 1.4px);background-size:6px 6px;border:1px solid #40454f;border-radius:12px;padding:16px 16px 14px 22px}
+.painel::before{content:"";position:absolute;left:7px;top:22px;bottom:22px;width:4px;border-radius:4px;background:#6f3cff;opacity:.25;transition:opacity .3s,box-shadow .3s}
+.maquina.preparando .painel::before{opacity:1;box-shadow:0 0 14px 3px rgba(150,90,255,.75)}
+.lcd{font-family:"VT323",monospace;font-size:1.55rem;line-height:1.05;letter-spacing:.06em;color:var(--lcd-tinta);background:var(--lcd);border-radius:6px;padding:.55rem .7rem;box-shadow:inset 0 2px 6px rgba(0,0,0,.35);min-height:3.6rem;white-space:pre;overflow:hidden}
+.bebidas{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.bebida{display:grid;grid-template-columns:2.4rem 1fr;align-items:center;gap:.7rem;width:100%;padding:0;border:0;background:none;color:#eceef2;font:inherit;font-size:1rem;text-align:left;cursor:pointer}
+.bebida__num{display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff6b6f,var(--botao) 55%,#8f1016);color:#fff;font-weight:700;font-size:1rem;box-shadow:0 2px 0 #5b0a0e,0 3px 6px rgba(0,0,0,.4);transition:transform .08s,box-shadow .08s}
+.bebida__nome{display:block;padding:.5rem .75rem;border-radius:5px;background:#333844;box-shadow:inset 0 1px 3px rgba(0,0,0,.5);transition:background-color .2s}
+.bebida:hover .bebida__nome{background:#3f4552}
+.bebida:active .bebida__num,.bebida[aria-pressed="true"] .bebida__num{transform:translateY(2px);box-shadow:0 0 0 #5b0a0e,0 0 12px rgba(255,80,80,.7)}
+.bebida[aria-pressed="true"] .bebida__nome{background:#525a69;color:#fff}
+.saida{position:relative;height:118px;margin-top:16px;border-radius:10px;background:linear-gradient(#0d0e12,#17191f);overflow:hidden}
+.saida__bico{position:absolute;left:50%;top:0;width:34px;height:16px;margin-left:-17px;background:#9aa0aa;border-radius:0 0 6px 6px}
+.saida__fio{position:absolute;left:50%;top:16px;width:4px;margin-left:-2px;height:0;background:var(--cor,#4a2c1a);border-radius:2px}
+.copo{position:absolute;left:50%;bottom:16px;width:54px;height:64px;margin-left:-27px;background:rgba(255,255,255,.93);clip-path:polygon(0 0,100% 0,88% 100%,12% 100%);overflow:hidden}
+.copo__bebida{position:absolute;left:0;right:0;bottom:0;height:0;background:var(--cor,#4a2c1a)}
+.saida__bandeja{position:absolute;left:18%;right:18%;bottom:6px;height:10px;border-radius:3px;background:repeating-linear-gradient(90deg,#9aa0aa 0 6px,#686d77 6px 9px)}
+.maquina.servindo .saida__fio{animation:fio 1.5s ease-in-out forwards}
+.maquina.servindo .copo__bebida{animation:enche 1.5s ease-in forwards}
+.maquina.pronto .copo__bebida{height:82%}
+@keyframes fio{0%{height:0}12%{height:46px}85%{height:46px}100%{height:0;top:62px}}
+@keyframes enche{0%,12%{height:0}100%{height:82%}}
+@media (prefers-reduced-motion:reduce){.maquina.servindo .saida__fio{animation:none}.maquina.servindo .copo__bebida{animation:none;height:82%}}
+.maquina__legenda{margin:1rem auto 0;width:min(100%,410px);font-size:.95rem;color:var(--sobre-escuro)}
+.pedido{width:min(100%,410px);margin:1rem auto 0;padding:1.1rem 1.2rem 1.2rem;border-radius:var(--raio);background:var(--cafe-2);border:1px solid #5a3a2a}
+.pedido[hidden]{display:none}
+.pedido p{color:var(--sobre-escuro);font-size:.98rem}
+.pedido p strong{color:#fff;font-size:1.1rem;display:block;margin-bottom:.15rem}
+.pedido .acao{width:100%;margin-top:.9rem}
+@media (prefers-reduced-motion:no-preference){.pedido:not([hidden]){animation:aparece .3s ease-out}}
+@keyframes aparece{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* notas por loja */
+.notas{list-style:none;padding:0;display:grid;gap:0;margin-top:2.5rem;border-top:1px solid var(--linha)}
+.notas li{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:.25rem 1rem;padding:1rem 0;border-bottom:1px solid var(--linha)}
+.notas__cidade{font-weight:700;font-size:1.15rem}
+.notas__valor{font-stretch:80%;font-weight:760;font-size:1.6rem;line-height:1}
+.notas__detalhe{grid-column:1/-1;color:var(--texto-2);font-size:.95rem}
+.notas a{color:var(--texto-2)}
+@media (min-width:760px){.notas{grid-template-columns:repeat(5,1fr);border-top:0}.notas li{display:block;padding:0 1.25rem;border-bottom:0;border-left:1px solid var(--linha)}.notas li:first-child{border-left:0;padding-left:0}.notas__valor{display:block;margin:.4rem 0 .3rem;font-size:2.2rem}}
+.notas-rodape{margin-top:1.5rem;font-size:.9rem;color:var(--texto-2)}
+
+/* incluso */
+.incluso{display:grid;gap:2.5rem;margin-top:2.75rem}
+@media (min-width:860px){.incluso{grid-template-columns:1.3fr 1fr;gap:4rem}}
+.incluso h3{margin-bottom:1rem}
+.lista{list-style:none;margin:0;padding:0}
+.lista li{position:relative;padding:.85rem 0 .85rem 2rem;border-top:1px solid var(--linha)}
+.lista li:last-child{border-bottom:1px solid var(--linha)}
+.lista li::before{content:"";position:absolute;left:.2rem;top:1.35rem;width:.85rem;height:.45rem;border-left:3px solid var(--laranja-escuro);border-bottom:3px solid var(--laranja-escuro);transform:rotate(-45deg)}
+.lista--sua li::before{width:.55rem;height:.55rem;top:1.25rem;border:0;border-radius:50%;background:var(--cafe-3);transform:none}
+.lista strong{display:block}
+.lista span{color:var(--texto-2);font-size:.98rem}
+
+/* como funciona */
+.funciona{display:grid;gap:3rem;margin-top:2.75rem;align-items:start}
+@media (min-width:900px){.funciona{grid-template-columns:1fr 1fr;gap:4.5rem}}
+.passos{list-style:none;margin:0;padding:0;counter-reset:passo}
+.passos li{counter-increment:passo;position:relative;padding:0 0 2rem 3.6rem}
+.passos li::before{content:counter(passo);position:absolute;left:0;top:-.2rem;display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--cafe);color:#fff;font-weight:700}
+.passos li::after{content:"";position:absolute;left:1.2rem;top:2.6rem;bottom:.3rem;width:2px;background:var(--linha)}
+.passos li:last-child{padding-bottom:0}
+.passos li:last-child::after{display:none}
+.passos h3{margin-bottom:.35rem}
+.passos p{color:var(--texto-2)}
+.foto-maquina{margin:0;border-radius:var(--raio);overflow:hidden;background:var(--latte)}
+.foto-maquina figcaption{padding:.8rem 1rem;font-size:.92rem;color:var(--texto-2);background:var(--branco)}
+@media (min-width:900px){.foto-maquina{position:sticky;top:2rem}}
+
+/* conta */
+.conta{display:grid;gap:2.5rem;margin-top:2.5rem;align-items:start}
+@media (min-width:900px){.conta{grid-template-columns:1fr 1fr;gap:4rem}}
+.campo{margin-bottom:2rem}
+.campo label{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-weight:700;margin-bottom:.75rem}
+.campo output{font-stretch:80%;font-size:1.9rem;font-weight:760;line-height:1}
+input[type=range]{width:100%;height:2.5rem;margin:0;background:transparent;accent-color:var(--laranja-escuro);cursor:pointer}
+.campo small{display:flex;justify-content:space-between;color:var(--texto-2);font-size:.85rem}
+.resultado{background:var(--cafe);color:#fff;border-radius:var(--raio);padding:2rem 1.75rem}
+.resultado__rotulo{color:var(--sobre-escuro);font-size:.98rem}
+.resultado__valor{display:block;font-stretch:76%;font-weight:780;font-size:clamp(2.8rem,9vw,4rem);line-height:1;margin:.35rem 0 .9rem}
+.resultado__xicara{display:flex;align-items:center;gap:1rem;padding:1rem 1.1rem;margin-bottom:1.5rem;border-radius:8px;background:var(--cafe-2)}
+.resultado__xicara svg{width:2.4rem;height:2.4rem;flex:none;color:#ffc23d}
+.resultado__xicara p{font-size:1.02rem;color:var(--sobre-escuro)}
+.resultado__xicara strong{color:#fff;font-size:1.25rem}
+.resultado dl{display:grid;grid-template-columns:1fr auto;gap:.5rem 1rem;margin:0 0 1.75rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15);font-size:.98rem}
+.resultado dt{color:var(--sobre-escuro)}
+.resultado dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+.resultado .acao{width:100%}
+.conta__nota{margin-top:1rem;font-size:.9rem;color:var(--texto-2);max-width:36rem}
+
+/* insumos */
+.insumos{display:grid;gap:3rem;margin-top:2.5rem}
+@media (min-width:900px){.insumos{grid-template-columns:1fr 1.25fr;align-items:center;gap:4rem}}
+.pacotes{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 1rem;align-items:end}
+@media (min-width:560px){.pacotes{grid-template-columns:repeat(4,1fr)}}
+.pacotes figure{margin:0;text-align:center;font-size:.9rem;color:var(--texto-2)}
+.pacotes img{margin:0 auto .6rem;height:clamp(170px,22vw,230px);width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 12px 14px rgba(43,26,18,.22))}
+.rende{margin-top:1.5rem;display:grid;gap:.75rem}
+.rende p{padding-left:1rem;border-left:3px solid var(--laranja)}
+
+/* depoimentos */
+.destaque{display:grid;gap:1.25rem;margin:2.5rem 0 0;max-width:52rem}
+@media (min-width:700px){.destaque{grid-template-columns:auto 1fr;gap:2rem;align-items:start}}
+.destaque img{width:104px;height:104px;border-radius:50%;object-fit:cover}
+.destaque blockquote{margin:0;font-size:clamp(1.3rem,3.1vw,1.8rem);line-height:1.35;font-stretch:92%;font-weight:500}
+.destaque figcaption{margin-top:1rem;color:var(--texto-2)}
+.destaque figcaption strong{color:var(--texto)}
+.depoimentos{list-style:none;padding:0;margin:3rem 0 0;display:grid;gap:1rem}
+@media (max-width:759px){.depoimentos{grid-auto-flow:column;grid-auto-columns:86%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.75rem;overscroll-behavior-x:contain}.depoimento{scroll-snap-align:start}}
+@media (min-width:760px){.depoimentos{grid-template-columns:1fr 1fr}}
+.depoimento{display:grid;grid-template-columns:56px 1fr;gap:1rem;align-items:start;padding:1.35rem;border-radius:var(--raio);background:var(--branco)}
+.depoimento img,.avatar{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.avatar{display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.4rem}
+.depoimento p{margin-bottom:.6rem}
+.depoimento footer{font-size:.92rem;color:var(--texto-2)}
+.depoimento footer strong{display:block;color:var(--texto);font-size:1rem}
+.google{margin-top:3rem}
+.google h3{margin-bottom:.4rem}
+.google .apoio{font-size:.95rem}
+
+/* clientes */
+.clientes{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:2.25rem 0 0;background:var(--linha);border:1px solid var(--linha)}
+@media (min-width:700px){.clientes{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:1000px){.clientes{grid-template-columns:repeat(6,1fr)}}
+.clientes li{display:grid;place-items:center;background:#fff;aspect-ratio:1}
+.clientes img{width:72%;filter:grayscale(1);opacity:.85;mix-blend-mode:multiply;transition:filter .2s,opacity .2s}
+.clientes li:hover img{filter:none;opacity:1}
+
+/* lojas */
+.lojas{display:grid;gap:3rem;margin-top:2.5rem}
+@media (min-width:960px){.lojas{grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}}
+.fachada{margin:0;border-radius:var(--raio);overflow:hidden}
+.fachada figcaption{padding:.8rem 0 0;font-size:.92rem;color:var(--texto-2)}
+.enderecos{list-style:none;margin:0;padding:0;border-top:1px solid var(--linha)}
+.endereco{display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;align-items:center;padding:1.15rem 0;border-bottom:1px solid var(--linha)}
+.endereco h3{font-size:1.3rem}
+.endereco p{grid-column:1;color:var(--texto-2);font-size:.98rem}
+.endereco .acao{grid-row:1/3;grid-column:2;min-height:2.75rem;padding:.55rem 1.1rem;font-size:.95rem}
+.endereco a.mapa{grid-column:1;font-size:.92rem;color:var(--texto-2)}
+
+/* dúvidas */
+.duvidas{margin-top:2.25rem;max-width:50rem;border-top:1px solid var(--linha)}
+.duvidas details{border-bottom:1px solid var(--linha)}
+.duvidas summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.15rem 0;font-weight:700;font-size:1.1rem;cursor:pointer;list-style:none}
+.duvidas summary::-webkit-details-marker{display:none}
+.duvidas summary::after{content:"";flex:none;width:.7rem;height:.7rem;border-right:2.5px solid var(--texto);border-bottom:2.5px solid var(--texto);transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+.duvidas details[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
+.duvidas details p{padding:0 0 1.25rem;color:var(--texto-2);max-width:42rem}
+
+/* final */
+.final{background:var(--cafe);color:#fff}
+.final h2{max-width:18ch}
+.final .apoio{color:var(--sobre-escuro);margin-top:1rem}
+.cidades{display:grid;gap:.75rem;margin-top:2.25rem}
+@media (min-width:700px){.cidades{grid-template-columns:repeat(5,1fr)}}
+.cidades .acao{justify-content:space-between;width:100%;border-radius:var(--raio);padding:1rem 1.2rem;min-height:4rem}
+.cidades .acao span{display:block;text-align:left;line-height:1.2}
+.cidades .acao small{display:block;font-weight:500;font-size:.85rem;opacity:.8}
+.rodape{background:#1d110c;color:var(--sobre-escuro);font-size:.92rem;padding:2.5rem 0 6rem}
+.rodape__grade{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;align-items:center}
+.rodape img{width:64px;height:64px}
+.redes{display:flex;gap:.75rem}
+.redes a{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;color:#fff;transition:background-color .15s}
+.redes a:hover{background:rgba(255,255,255,.1)}
+.redes svg{width:1.6rem;height:1.6rem}
+@media (min-width:900px){.rodape{padding-bottom:2.5rem}}
+
+/* barra fixa no celular */
+.barra-fixa{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:.75rem 1rem calc(.75rem + env(safe-area-inset-bottom));background:rgba(43,26,18,.96);backdrop-filter:blur(6px);transform:translateY(110%);transition:transform .25s}
+.barra-fixa.visivel{transform:none}
+.barra-fixa .acao{width:100%}
+@media (min-width:900px){.barra-fixa{display:none}}
+
+/* escolha da cidade, só abre quando a pessoa clica num botão de orçamento */
+dialog{width:min(100% - 2rem,30rem);border:0;border-radius:16px;padding:0;color:var(--texto)}
+dialog::backdrop{background:rgba(29,17,12,.65)}
+.escolha{padding:1.75rem 1.5rem 1.5rem}
+.escolha h2{font-size:1.9rem}
+.escolha p{color:var(--texto-2);margin-top:.5rem}
+.escolha ul{list-style:none;margin:1.25rem 0 0;padding:0;display:grid;gap:.5rem}
+.escolha a{display:flex;justify-content:space-between;align-items:center;padding:.95rem 1.1rem;border-radius:var(--raio);background:var(--latte);text-decoration:none;font-weight:700}
+.escolha a:hover{background:#e8d9ca}
+.escolha a small{font-weight:500;color:var(--texto-2)}
+.escolha__fechar{margin-top:1rem;width:100%;min-height:2.75rem;border:0;background:none;font:inherit;color:var(--texto-2);text-decoration:underline;cursor:pointer}
+</style>
+</head>
+<body>
+<div style="background:#efe6d8;color:#2a2019;font:500 14px/1.45 system-ui,sans-serif;text-align:center;padding:8px 16px">Prévia de proposta para a Café Prático. O site oficial continua em cafepratico.com.br.</div>
+
+
+<header class="topo">
+  <div class="envelope topo__barra">
+    <a class="topo__marca" href="#inicio" aria-label="Café Prático, início">
+      <img src="img/logo-branco.webp" width="56" height="56" alt="">
+      <span>Café Prático</span>
+    </a>
+    <nav class="topo__nav" aria-label="Seções">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#conta">Faça a conta</a>
+      <a href="#lojas">Lojas</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="acao topo__acao" href="#lojas" data-whats>Pedir orçamento</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="abertura" aria-labelledby="titulo-principal">
+  <div class="envelope abertura__grade">
+    <div>
+      <h1 id="titulo-principal">Máquina de café na sua empresa, instalada em até 72 horas</h1>
+      <p class="abertura__texto">A gente leva a máquina, instala sem custo, treina a equipe e cuida da manutenção. Aluguel a partir de R$ 9,33 por dia, com loja própria em Manaus, Belém, Boa Vista, Porto Velho e Teresina.</p>
+      <div class="abertura__acoes">
+        <a class="acao" href="#lojas" data-whats>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.08.89.9-3-.2-.31a8.2 8.2 0 1 1 6.88 3.75Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.78.96-.14.17-.29.19-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.73 2.73 0 0 0-.85 2.03 4.74 4.74 0 0 0 1 2.52 10.86 10.86 0 0 0 4.15 3.67c1.55.67 2.16.72 2.93.6.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.07.14-1.18-.06-.1-.22-.16-.46-.28Z"/></svg>
+          <span data-rotulo-whats>Pedir orçamento no WhatsApp</span>
+        </a>
+        <a class="link" href="#conta">Fazer a conta para a minha equipe</a>
+      </div>
+      <p class="cidade-lembrada" id="cidade-lembrada" hidden>Você vai falar com a loja de <strong data-cidade-nome>Manaus</strong>. <button class="link link-botao" type="button" data-trocar-cidade>Trocar cidade</button></p>
+      <p class="nota"><span class="estrelas" aria-hidden="true">★★★★★</span><span><strong>Nota 4,9 no Google</strong>, em 199 avaliações das cinco lojas</span></p>
+    </div>
+
+    <div>
+      <div class="maquina" id="maquina">
+        <div class="painel">
+          <div class="lcd" id="lcd" role="status" aria-live="polite">*CAFE PRATICO*
+ESCOLHA A BEBIDA</div>
+          <ul class="bebidas" aria-label="Bebidas da máquina">
+            <li><button class="bebida" type="button" aria-pressed="false" data-lcd="CAFE SUAVE" data-cor="#5a3520"><span class="bebida__num">1</span><span class="bebida__nome">Café suave</span></button></li>
+            <li><button class="bebida" type="button" aria-pressed="false" data-lcd="ESPRESSO CURTO" data-cor="#2f1a0e"><span class="bebida__num">2</span><span class="bebida__nome">Espresso curto</span></button></li>
+            <li><button class="bebida" type="button" aria-pressed="false" data-lcd="CAFE COM LEITE" data-cor="#b07a4f"><span class="bebida__num">3</span><span class="bebida__nome">Café com leite</span></button></li>
+            <li><button class="bebida" type="button" aria-pressed="false" data-lcd="CAFE C/CHOCOLATE" data-cor="#5e3524"><span class="bebida__num">4</span><span class="bebida__nome">Café com chocolate</span></button></li>
+            <li><button class="bebida" type="button" aria-pressed="false" data-lcd="CHOCOLATE" data-cor="#4b291b"><span class="bebida__num">5</span><span class="bebida__nome">Chocolate</span></button></li>
+            <li><button class="bebida" type="button" aria-pressed="false" data-lcd="MOCCACCINO" data-cor="#7a4a2e"><span class="bebida__num">6</span><span class="bebida__nome">Moccaccino</span></button></li>
+            <li><button class="bebida" type="button" aria-pressed="false" data-lcd="CAPPUCCINO" data-cor="#c49a6c"><span class="bebida__num">7</span><span class="bebida__nome">Cappuccino</span></button></li>
+            <li><button class="bebida" type="button" aria-pressed="false" data-lcd="CAPPUC. CANELA" data-cor="#b5835a"><span class="bebida__num">8</span><span class="bebida__nome">Cappuccino com canela</span></button></li>
+          </ul>
+        </div>
+        <div class="saida" aria-hidden="true">
+          <span class="saida__bico"></span>
+          <span class="saida__fio"></span>
+          <span class="copo"><span class="copo__bebida"></span></span>
+          <span class="saida__bandeja"></span>
+        </div>
+      </div>
+      <p class="maquina__legenda" id="legenda">São os mesmos oito botões da máquina que vai para a sua empresa. Escolha uma bebida.</p>
+      <div class="pedido" id="pedido" hidden>
+        <p><strong id="pedido-titulo">Cappuccino pronto.</strong>Quer essa bebida saindo na sua empresa todo dia? A loja manda o valor pelo WhatsApp.</p>
+        <a class="acao" href="#lojas" data-whats data-com-bebida>Quero essa máquina na minha empresa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" aria-labelledby="titulo-notas">
+  <div class="envelope">
+    <h2 class="titulo-secao" id="titulo-notas">199 avaliações no Google, nas cinco lojas</h2>
+    <p class="apoio">Cada loja tem a própria página no Google, com a nota e os comentários abertos para quem quiser ler.</p>
+    <ul class="notas">
+      <li><span class="notas__cidade">Manaus</span><span class="notas__valor">5,0</span><span class="notas__detalhe"><a href="https://www.google.com/maps/search/?api=1&amp;query=Caf%C3%A9+Pr%C3%A1tico+Am+Av.+Rio+Madeira+747+Manaus" target="_blank" rel="noopener">59 avaliações</a></span></li>
+      <li><span class="notas__cidade">Belém</span><span class="notas__valor">5,0</span><span class="notas__detalhe"><a href="https://www.google.com/maps/search/?api=1&amp;query=Caf%C3%A9+Pr%C3%A1tico+Bel%C3%A9m+R.+Domingos+Marreiros+1091" target="_blank" rel="noopener">51 avaliações</a></span></li>
+      <li><span class="notas__cidade">Teresina</span><span class="notas__valor">5,0</span><span class="notas__detalhe"><a href="https://www.google.com/maps/search/?api=1&amp;query=Caf%C3%A9+Pr%C3%A1tico+Piau%C3%AD+Teresina" target="_blank" rel="noopener">42 avaliações</a></span></li>
+      <li><span class="notas__cidade">Porto Velho</span><span class="notas__valor">4,9</span><span class="notas__detalhe"><a href="https://www.google.com/maps/search/?api=1&amp;query=Caf%C3%A9+Pr%C3%A1tico+Rond%C3%B4nia+Av.+Calama+1011" target="_blank" rel="noopener">27 avaliações</a></span></li>
+      <li><span class="notas__cidade">Boa Vista</span><span class="notas__valor">4,8</span><span class="notas__detalhe"><a href="https://www.google.com/maps/search/?api=1&amp;query=Caf%C3%A9+Pr%C3%A1tico+Roraima+Boa+Vista" target="_blank" rel="noopener">20 avaliações</a></span></li>
+    </ul>
+    <p class="notas-rodape">Números do Google Maps em novembro de 2026.</p>
+  </div>
+</section>
+
+<section class="secao secao--latte" aria-labelledby="titulo-incluso">
+  <div class="envelope">
+    <h2 class="titulo-secao" id="titulo-incluso">O que entra no aluguel</h2>
+    <p class="apoio">O que a Café Prático faz e o que fica com a sua empresa, para você saber antes de assinar.</p>
+    <div class="incluso">
+      <div>
+        <h3>Fica com a gente</h3>
+        <ul class="lista">
+          <li><strong>Instalação sem custo</strong><span>Em até 72 horas quando a máquina escolhida está na loja.</span></li>
+          <li><strong>Treinamento da equipe</strong><span>Quem vai cuidar da máquina aprende a abastecer e a limpar.</span></li>
+          <li><strong>Manutenção preventiva e corretiva</strong><span>Sem cobrança à parte enquanto o contrato estiver ativo.</span></li>
+          <li><strong>Reposição de insumos</strong><span>Café, leite, achocolatado e cappuccino entregues na sua empresa.</span></li>
+          <li><strong>Atendimento pela loja da sua cidade</strong><span>Pelo WhatsApp ou no balcão da loja.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Fica com a sua empresa</h3>
+        <ul class="lista lista--sua">
+          <li><strong>Usar os insumos da Café Prático</strong><span>A máquina é regulada para eles. Existe uma modalidade com insumo livre, em outras condições.</span></li>
+          <li><strong>Tomada 220&nbsp;V perto da máquina</strong><span>Ela não funciona em 110&nbsp;V sem transformador.</span></li>
+          <li><strong>Contrato de no mínimo 6&nbsp;meses</strong><span>Prazo, multa e assinatura estão explicados nas <a class="link" href="#duvidas">dúvidas</a>.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="como-funciona" aria-labelledby="titulo-funciona">
+  <div class="envelope">
+    <h2 class="titulo-secao" id="titulo-funciona">Do primeiro contato ao primeiro café</h2>
+    <div class="funciona">
+      <ol class="passos">
+        <li><h3>Conversa no WhatsApp</h3><p>Você conta quantas pessoas tomam café e onde a máquina vai ficar. A loja indica o modelo e passa o valor.</p></li>
+        <li><h3>Escolha da máquina</h3><p>Pelo WhatsApp ou na loja, você conhece os modelos e as bebidas de cada um antes de fechar.</p></li>
+        <li><h3>Contrato e instalação</h3><p>Assinado o contrato, a instalação é feita em até 72 horas com a máquina em estoque. Se o modelo estiver em falta, em até 15 dias.</p></li>
+        <li><h3>Treinamento e reposição</h3><p>No dia da instalação a equipe aprende a usar. Depois disso, é só pedir os insumos pelo WhatsApp quando estiverem acabando.</p></li>
+      </ol>
+      <figure class="foto-maquina">
+        <picture>
+          <source media="(min-width:900px)" srcset="img/maquina-instalada-900.webp">
+          <img src="img/maquina-instalada-560.webp" width="560" height="747" loading="lazy" alt="Máquina de café da Café Prático instalada sobre um balcão de madeira, com o painel de oito botões aceso">
+        </picture>
+        <figcaption>Máquina instalada em cliente, com o adesivo da Café Prático.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--latte" id="conta" aria-labelledby="titulo-conta">
+  <div class="envelope">
+    <h2 class="titulo-secao" id="titulo-conta">Faça a conta para a sua equipe</h2>
+    <p class="apoio">Uma estimativa com o cafezinho. O valor exato a loja passa no orçamento.</p>
+    <div class="conta">
+      <form id="calculadora" onsubmit="return false">
+        <div class="campo">
+          <label for="pessoas">Pessoas que tomam café <output id="saida-pessoas" for="pessoas">15</output></label>
+          <input type="range" id="pessoas" min="5" max="100" step="1" value="15">
+          <small><span>5</span><span>100</span></small>
+        </div>
+        <div class="campo">
+          <label for="cafes">Cafés por pessoa no dia <output id="saida-cafes" for="cafes">2</output></label>
+          <input type="range" id="cafes" min="1" max="5" step="1" value="2">
+          <small><span>1</span><span>5</span></small>
+        </div>
+        <p class="conta__nota">Conta feita com 22 dias úteis, o cafezinho de 50 ml a R$ 0,34 a dose e a máquina de entrada a R$ 9,33 por dia. Cappuccino e chocolate custam mais por dose, e equipes grandes podem precisar de uma máquina maior.</p>
+      </form>
+      <div class="resultado" aria-live="polite">
+        <p class="resultado__rotulo">Por mês, a partir de</p>
+        <strong class="resultado__valor" id="total">R$ 504</strong>
+        <div class="resultado__xicara">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M8 18h26v10a11 11 0 0 1-11 11h-4A11 11 0 0 1 8 28V18Zm26 3h3a5 5 0 0 1 0 10h-3.5M6 43h30M17 6c-2 3 2 5 0 8M24 6c-2 3 2 5 0 8"/></svg>
+          <p>Cada café sai por <strong id="por-cafe">R$ 0,76</strong>, já com o aluguel da máquina. Quanto mais gente usa, mais barato fica.</p>
+        </div>
+        <dl>
+          <dt>Aluguel da máquina</dt><dd id="aluguel">R$ 280</dd>
+          <dt id="rotulo-doses">660 cafezinhos no mês</dt><dd id="insumos">R$ 224</dd>
+        </dl>
+        <a class="acao" href="#lojas" data-whats data-com-conta>Mandar essa conta para a loja</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" aria-labelledby="titulo-insumos">
+  <div class="envelope insumos">
+    <div>
+      <h2 class="titulo-secao" id="titulo-insumos">Café 100% arábica e insumos com a nossa marca</h2>
+      <p class="apoio">Leite, achocolatado e cappuccino levam a marca Café Prático. A loja entrega na sua empresa quando o estoque estiver baixando.</p>
+      <div class="rende">
+        <p>Um pacote de café de 510 g rende de 510 a 600 cafezinhos de 50 ml.</p>
+        <p>Um pacote de 1 kg de cappuccino ou chocolate rende de 60 a 70 copos de 100 ml.</p>
+      </div>
+    </div>
+    <div class="pacotes">
+      <figure><img src="img/cafe-liofilizado.webp" width="274" height="420" loading="lazy" alt="Pacote de café gourmet liofilizado 100% arábica, 510 g">Café 100% arábica</figure>
+      <figure><img src="img/leite.webp" width="283" height="420" loading="lazy" alt="Pacote de leite em pó Café Prático, 1 kg">Leite</figure>
+      <figure><img src="img/achocolatado.webp" width="265" height="420" loading="lazy" alt="Pacote de achocolatado Café Prático, 1 kg">Achocolatado</figure>
+      <figure><img src="img/cappuccino.webp" width="264" height="420" loading="lazy" alt="Pacote de cappuccino premium Café Prático, 1 kg">Cappuccino</figure>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--latte" aria-labelledby="titulo-clientes">
+  <div class="envelope">
+    <h2 class="titulo-secao" id="titulo-clientes">Quem já tem a máquina</h2>
+    <figure class="destaque">
+      <img src="img/pessoas/geovanni-silva.webp" width="110" height="110" alt="Foto de Geovanni Silva">
+      <div>
+        <blockquote><p>“Eu não tinha, na empresa, uma pessoa que fosse contratada para fazer café. (...) Hoje, eles estão a um botão de qualquer das 8 bebidas diferentes, padronizadas e muito gostosas. (...) A gente aperta um botão e a bebida está na mão!”</p></blockquote>
+        <figcaption><strong>Geovanni Silva</strong>, cliente da Café Prático</figcaption>
+      </div>
+    </figure>
+    <ul class="depoimentos">
+      <li class="depoimento"><img src="img/pessoas/fernando-fernandes.webp" width="110" height="110" loading="lazy" alt="Foto de Fernando Fernandes"><div><p>“O atendimento é excepcional e a loja tem tudo que o empresário precisa saber sobre cada tipo de máquina.”</p><footer><strong>Fernando Fernandes</strong>CEO da F12 Contabilidade</footer></div></li>
+      <li class="depoimento"><img src="img/pessoas/selem-hesber.webp" width="110" height="110" loading="lazy" alt="Foto de Selem Hesber"><div><p>“Receber o cliente com o aroma do café é prenúncio de bons negócios.”</p><footer><strong>Selem Hesber</strong>Diretor da Gráfica Imediata</footer></div></li>
+      <li class="depoimento"><img src="img/pessoas/robson-ribeiro.webp" width="110" height="110" loading="lazy" alt="Foto de Robson Ribeiro"><div><p>“Adquirir uma máquina de café foi a melhor escolha que já fiz, antes eu trabalhava com café na garrafa térmica e não era muito satisfatório pelo fato de esfriar o café (...)”</p><footer><strong>Robson Ribeiro</strong>Cliente da Café Prático</footer></div></li>
+      <li class="depoimento"><img src="img/pessoas/hazuky-martins.webp" width="110" height="110" loading="lazy" alt="Foto de Hazuky Martins"><div><p>“Alugamos para o setor que trabalho e foi sucesso total. (...) Não abro a mão do meu chocolate quente todas as manhãs.”</p><footer><strong>Hazuky Martins</strong>Cliente da Café Prático</footer></div></li>
+    </ul>
+
+    <div class="google">
+      <h3>Avaliações recentes no Google</h3>
+      <p class="apoio">Comentários públicos nas páginas das lojas.</p>
+      <ul class="depoimentos">
+        <li class="depoimento"><span class="avatar" style="background:#7b4a2e" aria-hidden="true">L</span><div><span class="estrelas" aria-label="5 estrelas">★★★★★</span><p>“Muito satisfeito com o produto. Cafés selecionados, máquina e instalação ótima! Melhor atendimento antes e nos pós-venda.”</p><footer><strong>Luiz Felipe</strong>Loja de Manaus</footer></div></li>
+        <li class="depoimento"><span class="avatar" style="background:#a0522d" aria-hidden="true">E</span><div><span class="estrelas" aria-label="5 estrelas">★★★★★</span><p>“Os dois colaboradores responsáveis pela instalação do equipamento foram extremamente profissionais, educados e atenciosos.”</p><footer><strong>Eduarda Rodrigues</strong>Loja de Belém</footer></div></li>
+        <li class="depoimento"><span class="avatar" style="background:#5e6b3a" aria-hidden="true">M</span><div><span class="estrelas" aria-label="5 estrelas">★★★★★</span><p>“Máquina Ônix chegou no trabalho. Café top. Amei o cappuccino.”</p><footer><strong>Milena Ramos</strong>Loja de Belém</footer></div></li>
+        <li class="depoimento"><span class="avatar" style="background:#3f5f74" aria-hidden="true">R</span><div><span class="estrelas" aria-label="5 estrelas">★★★★★</span><p>“Excelente atendimento e o serviço prestado é de muita qualidade.”</p><footer><strong>Reurison Paz</strong>Loja de Boa Vista</footer></div></li>
+      </ul>
+    </div>
+
+    <h3 style="margin-top:3.5rem">Algumas empresas atendidas</h3>
+    <ul class="clientes">
+      <li><img src="img/clientes/alfa-hotel.webp" width="200" height="200" loading="lazy" alt="Alfa Hotel"></li>
+      <li><img src="img/clientes/alfa.webp" width="200" height="200" loading="lazy" alt="Alphaclin"></li>
+      <li><img src="img/clientes/biomed.webp" width="200" height="200" loading="lazy" alt="Laboratório BioMed"></li>
+      <li><img src="img/clientes/francisco-vilar.webp" width="200" height="200" loading="lazy" alt="Hospital de Olhos Francisco Vilar"></li>
+      <li><img src="img/clientes/rovena.webp" width="200" height="200" loading="lazy" alt="Grupo Rovema"></li>
+      <li><img src="img/clientes/habita.webp" width="200" height="200" loading="lazy" alt="Habitamais"></li>
+      <li><img src="img/clientes/marilia.webp" width="200" height="200" loading="lazy" alt="Marília Nutri"></li>
+      <li><img src="img/clientes/norte.webp" width="200" height="200" loading="lazy" alt="Panificadora Norte Nordeste"></li>
+      <li><img src="img/clientes/paoecia.webp" width="200" height="200" loading="lazy" alt="Pão e Cia do Norte"></li>
+      <li><img src="img/clientes/texas.webp" width="200" height="200" loading="lazy" alt="Texas Picanharia"></li>
+      <li><img src="img/clientes/maisabor.webp" width="200" height="200" loading="lazy" alt="Maisabor Self-service"></li>
+      <li><img src="img/clientes/criative.webp" width="200" height="200" loading="lazy" alt="Criative Hair e Beauty"></li>
+    </ul>
+  </div>
+</section>
+
+<section class="secao" id="lojas" aria-labelledby="titulo-lojas">
+  <div class="envelope">
+    <h2 class="titulo-secao" id="titulo-lojas">Tem loja da Café Prático na sua cidade</h2>
+    <p class="apoio">O WhatsApp de cada cidade fala direto com a loja de lá.</p>
+    <div class="lojas">
+      <figure class="fachada">
+        <picture>
+          <source media="(min-width:960px)" srcset="img/loja-manaus-1280.webp">
+          <img src="img/loja-manaus-720.webp" width="720" height="405" loading="lazy" alt="Fachada da loja da Café Prático em Manaus, com o logotipo redondo na parede laranja">
+        </picture>
+        <figcaption>Loja de Manaus, na Avenida Rio Madeira.</figcaption>
+      </figure>
+      <ul class="enderecos" id="lista-lojas"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--latte" id="duvidas" aria-labelledby="titulo-duvidas">
+  <div class="envelope">
+    <h2 class="titulo-secao" id="titulo-duvidas">Dúvidas sobre o contrato e a máquina</h2>
+    <div class="duvidas">
+      <details><summary>Qual é o prazo mínimo do contrato?</summary><p>Seis meses. O contrato é assinado com firma reconhecida em cartório ou com o certificado digital da empresa.</p></details>
+      <details><summary>E se eu precisar cancelar antes dos 6&nbsp;meses?</summary><p>A multa é de dois aluguéis. Ela cobre a retirada, a desinstalação e a higienização da máquina.</p></details>
+      <details><summary>Sou obrigado a comprar os insumos da Café Prático?</summary><p>No aluguel padrão, sim. A máquina é regulada para esses produtos, e usar outro insumo quebra o contrato. Existe a modalidade livre, em que a empresa usa a marca que quiser, mas sem as mesmas condições do aluguel padrão.</p></details>
+      <details><summary>Dá para comprar a máquina em vez de alugar?</summary><p>Dá. Nesse caso não há contrato de aluguel e você usa o insumo que quiser. Quem continua comprando os insumos da Café Prático segue com suporte técnico sem cobrança de mão de obra na troca de peças.</p></details>
+      <details><summary>A máquina funciona em tomada 110&nbsp;V?</summary><p>Não. Ela precisa de tomada 220&nbsp;V ou de um transformador de pelo menos 2.500&nbsp;VA.</p></details>
+      <details><summary>Quanto rende cada pacote?</summary><p>O café de 510 g faz de 510 a 600 cafezinhos de 50 ml. Cappuccino e chocolate de 1 kg fazem de 60 a 70 copos de 100 ml.</p></details>
+      <details><summary>O aluguel pode entrar como despesa da empresa?</summary><p>Para empresas no lucro real, o aluguel de equipamento costuma ser lançado como despesa operacional. Confirme com o seu contador como fica no caso da sua empresa.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="secao final" aria-labelledby="titulo-final">
+  <div class="envelope">
+    <h2 id="titulo-final">Fale com a loja da sua cidade</h2>
+    <p class="apoio">Diga quantas pessoas tomam café na sua empresa. A loja responde com o modelo indicado e o valor.</p>
+    <div class="cidades" id="cidades-final"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="envelope rodape__grade">
+    <img src="img/logo-branco.webp" width="64" height="64" alt="Café Prático, máquinas e insumos" loading="lazy">
+    <p>Café Prático, máquinas e insumos<br>Amaro e Correa Ltda, CNPJ 26.781.670/0001-86<br>Av. Rio Madeira, 747, Manaus (AM)</p>
+    <nav class="redes" aria-label="Redes sociais">
+      <a href="https://www.instagram.com/cafepratico/" target="_blank" rel="noopener" aria-label="Instagram da Café Prático">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg>
+      </a>
+      <a href="https://www.facebook.com/cafepratico" target="_blank" rel="noopener" aria-label="Facebook da Café Prático">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.6 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9a23 23 0 0 0-2.5-.1c-2.5 0-4.2 1.5-4.2 4.3v2.4H7.4v3.3h2.8V22h3.4Z"/></svg>
+      </a>
+    </nav>
+  </div>
+</footer>
+
+<div class="barra-fixa" id="barra-fixa">
+  <a class="acao" href="#lojas" data-whats><span data-rotulo-whats>Pedir orçamento no WhatsApp</span></a>
+</div>
+
+<dialog id="escolha" aria-labelledby="titulo-escolha">
+  <div class="escolha">
+    <h2 id="titulo-escolha">Qual loja atende a sua empresa?</h2>
+    <p>A conversa abre no WhatsApp da cidade escolhida. Nas próximas vezes a página já vai direto para ela.</p>
+    <ul id="lista-escolha"></ul>
+    <button class="escolha__fechar" type="button" id="fechar-escolha">Fechar</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var LOJAS=[
+    {id:'manaus',cidade:'Manaus',uf:'AM',fone:'5592995018300',tel:'(92) 99501-8300',end:'Av. Rio Madeira, 747, Nossa Senhora das Graças',mapa:'Caf%C3%A9+Pr%C3%A1tico+Am+Av.+Rio+Madeira+747+Manaus'},
+    {id:'belem',cidade:'Belém',uf:'PA',fone:'5591991068300',tel:'(91) 99106-8300',end:'R. Domingos Marreiros, 1091, Umarizal',mapa:'Caf%C3%A9+Pr%C3%A1tico+Bel%C3%A9m+R.+Domingos+Marreiros+1091'},
+    {id:'boa-vista',cidade:'Boa Vista',uf:'RR',fone:'5595991108302',tel:'(95) 99110-8302',end:'Av. São Sebastião, 1853, Santa Tereza',mapa:'Caf%C3%A9+Pr%C3%A1tico+Roraima+Boa+Vista'},
+    {id:'porto-velho',cidade:'Porto Velho',uf:'RO',fone:'5569984844973',tel:'(69) 98484-4973',end:'Av. Calama, 1011, sala B, Olaria',mapa:'Caf%C3%A9+Pr%C3%A1tico+Rond%C3%B4nia+Av.+Calama+1011'},
+    {id:'teresina',cidade:'Teresina',uf:'PI',fone:'5586998606951',tel:'(86) 99860-6951',end:'Av. Jóquei Clube, 555, Jóquei',mapa:'Caf%C3%A9+Pr%C3%A1tico+Piau%C3%AD+Teresina'}
+  ];
+  var ICONE='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.08.89.9-3-.2-.31a8.2 8.2 0 1 1 6.88 3.75Z"/></svg>';
+  var $=function(id){return document.getElementById(id);};
+  var brl=function(v,c){return 'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:c||0,maximumFractionDigits:c||0});};
+  var porId=function(id){return LOJAS.filter(function(l){return l.id===id;})[0];};
+
+  /* conta */
+  var DIAS=22, DOSE=0.34, ALUGUEL=280;
+  var conta={pessoas:15,cafes:2,usada:false};
+  function calcular(){
+    var doses=conta.pessoas*conta.cafes*DIAS, insumo=doses*DOSE, total=ALUGUEL+insumo;
+    $('saida-pessoas').textContent=conta.pessoas;
+    $('saida-cafes').textContent=conta.cafes;
+    $('total').textContent=brl(Math.round(total));
+    $('por-cafe').textContent=brl(total/doses,2);
+    $('aluguel').textContent=brl(ALUGUEL);
+    $('rotulo-doses').textContent=doses.toLocaleString('pt-BR')+' cafezinhos no mês';
+    $('insumos').textContent=brl(Math.round(insumo));
+  }
+  ['pessoas','cafes'].forEach(function(k){
+    $(k).addEventListener('input',function(e){conta[k]=+e.target.value;conta.usada=true;calcular();});
+  });
+  calcular();
+
+  /* mensagem do WhatsApp */
+  var bebidaEscolhida=null;
+  function mensagem(loja,extras){
+    extras=extras||{};
+    var t='Olá! Vim pelo site e quero um orçamento de máquina de café para a minha empresa em '+loja.cidade+'.';
+    if(extras.bebida&&bebidaEscolhida){t='Olá! Vim pelo site, apertei o '+bebidaEscolhida.toLowerCase()+' na máquina e quero um orçamento para a minha empresa em '+loja.cidade+'.';}
+    if(extras.conta||conta.usada){t+=' Somos umas '+conta.pessoas+' pessoas, cerca de '+conta.cafes+' café'+(conta.cafes>1?'s':'')+' por pessoa no dia.';}
+    return 'https://wa.me/'+loja.fone+'?text='+encodeURIComponent(t);
+  }
+
+  /* cidade lembrada: a escolha só aparece quando a pessoa clica em pedir orçamento */
+  var cidade=null; try{cidade=localStorage.getItem('cp-loja');}catch(e){}
+  if(cidade&&!porId(cidade)){cidade=null;}
+  function atualizarCidade(){
+    var l=cidade&&porId(cidade);
+    document.querySelectorAll('[data-rotulo-whats]').forEach(function(s){s.textContent=l?'Falar com a loja de '+l.cidade:'Pedir orçamento no WhatsApp';});
+    $('cidade-lembrada').hidden=!l;
+    if(l){document.querySelector('[data-cidade-nome]').textContent=l.cidade;}
+  }
+  function lembrar(id){cidade=id;try{localStorage.setItem('cp-loja',id);}catch(e){}atualizarCidade();}
+  atualizarCidade();
+
+  var dialogo=$('escolha'), extrasAtuais={};
+  function abrirEscolha(extras){
+    extrasAtuais=extras||{};
+    $('lista-escolha').innerHTML=LOJAS.map(function(l){
+      return '<li><a href="'+mensagem(l,extrasAtuais)+'" target="_blank" rel="noopener" data-escolher="'+l.id+'">'+l.cidade+' <small>'+l.tel+'</small></a></li>';
+    }).join('');
+    dialogo.showModal();
+  }
+  document.addEventListener('click',function(e){
+    var gatilho=e.target.closest('[data-whats]');
+    if(gatilho){
+      var extras={conta:gatilho.hasAttribute('data-com-conta'),bebida:gatilho.hasAttribute('data-com-bebida')};
+      var l=cidade&&porId(cidade);
+      if(l){gatilho.href=mensagem(l,extras);gatilho.target='_blank';gatilho.rel='noopener';return;}
+      if(dialogo.showModal){e.preventDefault();abrirEscolha(extras);}
+      return;
+    }
+    var escolhido=e.target.closest('a[data-escolher]');
+    if(escolhido){lembrar(escolhido.getAttribute('data-escolher'));dialogo.close();return;}
+    var direto=e.target.closest('a[data-loja]');
+    if(direto){direto.href=mensagem(porId(direto.getAttribute('data-loja')));lembrar(direto.getAttribute('data-loja'));return;}
+    if(e.target.closest('[data-trocar-cidade]')){abrirEscolha({});}
+  });
+  $('fechar-escolha').addEventListener('click',function(){dialogo.close();});
+  dialogo.addEventListener('click',function(e){if(e.target===dialogo){dialogo.close();}});
+
+  /* lojas e botões finais */
+  $('lista-lojas').innerHTML=LOJAS.map(function(l){
+    return '<li class="endereco"><h3>'+l.cidade+' ('+l.uf+')</h3><p>'+l.end+'</p><a class="mapa" href="https://www.google.com/maps/search/?api=1&query='+l.mapa+'" target="_blank" rel="noopener">Ver no mapa e nas avaliações</a><a class="acao" href="'+mensagem(l)+'" target="_blank" rel="noopener" data-loja="'+l.id+'">'+ICONE+'WhatsApp</a></li>';
+  }).join('');
+  $('cidades-final').innerHTML=LOJAS.map(function(l){
+    return '<a class="acao" href="'+mensagem(l)+'" target="_blank" rel="noopener" data-loja="'+l.id+'"><span>'+l.cidade+'<small>'+l.tel+'</small></span>'+ICONE+'</a>';
+  }).join('');
+
+  /* a máquina: uma bebida e o pedido aparece logo abaixo */
+  var maquina=$('maquina'), lcd=$('lcd'), pedido=$('pedido'), legenda=$('legenda'), timers=[];
+  var reduzido=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function limpar(){timers.forEach(clearTimeout);timers=[];}
+  function linha(t){t=t.slice(0,16);return t+Array(17-t.length).join(' ');}
+  function mostrarPedido(nome){
+    $('pedido-titulo').textContent=nome+' pronto.';
+    legenda.hidden=true;
+    pedido.hidden=false;
+    var r=pedido.getBoundingClientRect();
+    if(r.bottom>window.innerHeight||r.top<0){pedido.scrollIntoView({block:'nearest',behavior:reduzido?'auto':'smooth'});}
+  }
+  document.querySelectorAll('.bebida').forEach(function(b){
+    b.addEventListener('click',function(){
+      limpar();
+      document.querySelectorAll('.bebida').forEach(function(o){o.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      var tela=b.getAttribute('data-lcd'), nome=b.querySelector('.bebida__nome').textContent;
+      bebidaEscolhida=nome;
+      maquina.style.setProperty('--cor',b.getAttribute('data-cor'));
+      maquina.classList.remove('servindo','pronto','preparando');
+      void maquina.offsetWidth;
+      if(reduzido){
+        maquina.classList.add('pronto');
+        lcd.textContent=linha(tela)+'\nPRONTO! BOM CAFE';
+        mostrarPedido(nome);
+        return;
+      }
+      maquina.classList.add('preparando','servindo');
+      var passos=12;
+      for(var i=0;i<=passos;i++){(function(i){
+        timers.push(setTimeout(function(){
+          lcd.textContent=linha(tela)+'\n'+Array(i+1).join('█')+Array(passos-i+1).join(' ');
+        },i*110));
+      })(i);}
+      timers.push(setTimeout(function(){
+        maquina.classList.remove('preparando');
+        lcd.textContent=linha(tela)+'\nPRONTO! BOM CAFE';
+        mostrarPedido(nome);
+      },passos*110+200));
+    });
+  });
+
+  /* barra fixa depois da abertura */
+  var barra=$('barra-fixa'), abertura=document.querySelector('.abertura');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){barra.classList.toggle('visivel',!es[0].isIntersecting);}).observe(abertura);
+  }
+})();
+</script>
+</body>
+</html>
